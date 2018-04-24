@@ -30,7 +30,7 @@ async function deleteBranch(branchName: string) {
 
 async function gitHistory() {
   const { stdout, stderr } = await exec(
-    "git log --oneline --abbrev-commit --all --graph --decorate --color -n 50"
+    "git log --oneline --abbrev-commit --all --graph --decorate --color -n 100"
   );
   console.log(stdout);
 }
