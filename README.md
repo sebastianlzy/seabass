@@ -8,21 +8,13 @@ A list of commonly use CLI
 
 <!-- usage -->
 
-1.  clone (repo)[https://github.com/sebastianlzy/seabass]
-2.  npm install
-3.  npm link
+1.  npm install -g seabass
 
 # Commands
 
 <!-- commands -->
 
 `seabass <flag> <branchName>`
-
-## Option flag
-
-`-c : create branch`
-`-d : delete branch`
-`-r : rebase branch`
 
 ### --rebase <branchName>
 
