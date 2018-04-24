@@ -1,12 +1,12 @@
 {
-  "name": "rebase-to-master",
+  "name": "seabass",
   "description": "To rebase current branch to master",
   "version": "0.0.0",
   "author": "sebastian @sebastianleezy",
   "bin": {
     "seabass": "./bin/run"
   },
-  "bugs": "https://github.com/https://github.com/sebastianlzy/rebase-to-master/issues",
+  "bugs": "https://github.com/sebastianlzy/seabass/issues",
   "dependencies": {
     "@oclif/command": "1",
     "@oclif/config": "1",
@@ -33,7 +33,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/https://github.com/sebastianlzy/rebase-to-master",
+  "homepage": "https://github.com/https://github.com/sebastianlzy/seabass",
   "keywords": [
     "oclif"
   ],
@@ -42,7 +42,7 @@
   "oclif": {
     "bin": "seabass"
   },
-  "repository": "https://github.com/sebastianlzy/rebase-to-master",
+  "repository": "https://github.com/sebastianlzy/seabass",
   "scripts": {
     "posttest": "tsc -p test --noEmit && tslint -p test -t stylish",
     "prepack": "rm -rf lib && tsc",
