@@ -8,7 +8,6 @@ async function createBranch(branchName: string) {
   const { stdout, stderr } = await exec(
     `git checkout -b feature/${branchName}`
   );
-  await list();
 }
 
 async function rebaseBranch(branchName: string) {
@@ -18,7 +17,7 @@ async function rebaseBranch(branchName: string) {
   );
 }
 
-async function list() {
+async function listBranches() {
   console.log(`Listing all branches :`);
   const { stdout, stderr } = await exec("git branch");
   console.log(stdout);
@@ -29,21 +28,29 @@ async function deleteBranch(branchName: string) {
   const { stdout, stderr } = await exec(`git branch -d feature/${branchName}`);
 }
 
+async function gitHistory() {
+  const { stdout, stderr } = await exec(
+    "git log --oneline --abbrev-commit --all --graph --decorate --color"
+  );
+  console.log(stdout);
+}
+
 class RebaseToMaster extends Command {
   static description = "describe the command here";
 
   static args = [
     {
       name: "branchName",
-      required: true,
-      description: "input the branch to be rebased on"
+      description: "input branch name"
     }
   ];
 
   static flags = {
     create: flags.boolean({ char: "c" }),
     rebase: flags.boolean({ char: "r" }),
-    delete: flags.boolean({ char: "d" })
+    delete: flags.boolean({ char: "d" }),
+    list: flags.boolean({ char: "l" }),
+    history: flags.boolean({ char: "h" })
   };
 
   async run() {
@@ -57,6 +64,12 @@ class RebaseToMaster extends Command {
     }
     if (flags.delete && args.branchName) {
       return deleteBranch(args.branchName);
+    }
+    if (flags.history) {
+      return gitHistory();
+    }
+    if (flags.list) {
+      return listBranches();
     }
   }
 }

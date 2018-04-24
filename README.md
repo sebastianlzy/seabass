@@ -34,10 +34,22 @@ This allows you to rebase your current branch on top of master. NOTE: Rebase wil
 
 `seabass -c new-branch`
 
-This allows you to create new branch which adhere to the format feature/<branchName>
+This allows you to create new branch which adhere to the format `feature/<branchName>`
 
 ### --delete <branchName>
 
 `seabass -d new-branch`
 
-This allows you to delete existing branch, feature/<branchName>
+This allows you to delete existing branch, `feature/<branchName>`
+
+### --history <branchName>
+
+`seabass -h`
+
+This show the history of all commits
+
+### --list
+
+`seabass -l`
+
+This show all branches for this repo
