@@ -1,7 +1,7 @@
 {
   "name": "seabass",
   "description": "To rebase current branch to master",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "sebastian @sebastianleezy",
   "bin": {
     "seabass": "./bin/run"
