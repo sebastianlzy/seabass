@@ -48,14 +48,15 @@ class RebaseToMaster extends Command {
 
   async run() {
     const { args, flags } = this.parse(RebaseToMaster);
-    if (flags.create) {
-      createBranch(args.branchName);
+
+    if (flags.create && args.branchName) {
+      return createBranch(args.branchName);
     }
-    if (flags.rebase) {
-      rebaseBranch(args.branchName);
+    if (flags.rebase && args.branchName) {
+      return rebaseBranch(args.branchName);
     }
-    if (flags.delete) {
-      deleteBranch(args.branchName);
+    if (flags.delete && args.branchName) {
+      return deleteBranch(args.branchName);
     }
   }
 }
