@@ -45,6 +45,7 @@
   "repository": "https://github.com/sebastianlzy/seabass",
   "scripts": {
     "posttest": "tsc -p test --noEmit && tslint -p test -t stylish",
+    "publish": "npm version patch; npm publish",
     "prepack": "rm -rf lib && tsc",
     "test": "nyc mocha --forbid-only \"test/**/*.test.ts\""
   },
