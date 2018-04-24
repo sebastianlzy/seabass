@@ -1,0 +1,52 @@
+{
+  "name": "rebase-to-master",
+  "description": "To rebase current branch to master",
+  "version": "0.0.0",
+  "author": "sebastian @sebastianleezy",
+  "bin": {
+    "seabass": "./bin/run"
+  },
+  "bugs": "https://github.com/https://github.com/sebastianlzy/rebase-to-master/issues",
+  "dependencies": {
+    "@oclif/command": "1",
+    "@oclif/config": "1",
+    "@oclif/plugin-help": "1"
+  },
+  "devDependencies": {
+    "@oclif/test": "1",
+    "@oclif/tslint": "1",
+    "@types/chai": "4",
+    "@types/mocha": "5",
+    "@types/node": "9",
+    "chai": "4",
+    "mocha": "5",
+    "nyc": "11",
+    "ts-node": "5",
+    "tslib": "1",
+    "tslint": "5",
+    "typescript": "2.8"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/https://github.com/sebastianlzy/rebase-to-master",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "seabass"
+  },
+  "repository": "https://github.com/sebastianlzy/rebase-to-master",
+  "scripts": {
+    "posttest": "tsc -p test --noEmit && tslint -p test -t stylish",
+    "prepack": "rm -rf lib && tsc",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.ts\""
+  },
+  "types": "lib/index.d.ts"
+}
