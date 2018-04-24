@@ -4,8 +4,10 @@ const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 
 async function createBranch(branchName: string) {
-  console.log(`Created new branch : ${branchName}`);
-  const { stdout, stderr } = await exec(`git checkout -b ${branchName}`);
+  console.log(`Created new branch : feature/${branchName}`);
+  const { stdout, stderr } = await exec(
+    `git checkout -b feature/${branchName}`
+  );
   await list();
 }
 
@@ -24,7 +26,7 @@ async function list() {
 
 async function deleteBranch(branchName: string) {
   console.log(`Deleting branch : ${branchName}`);
-  const { stdout, stderr } = await exec(`git branch -d ${branchName}`);
+  const { stdout, stderr } = await exec(`git branch -d feature/${branchName}`);
 }
 
 class RebaseToMaster extends Command {

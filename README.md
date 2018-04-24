@@ -1,17 +1,43 @@
-rebase-to-master
-================
+# Seabass CLI
 
-To rebase current branch to master
-
-[![Version](https://img.shields.io/npm/v/rebase-to-master.svg)](https://npmjs.org/package/rebase-to-master)
-[![CircleCI](https://circleci.com/gh/https://github.com/sebastianlzy/rebase-to-master/tree/master.svg?style=shield)](https://circleci.com/gh/https://github.com/sebastianlzy/rebase-to-master/tree/master)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/https://github.com/sebastianlzy/rebase-to-master?branch=master&svg=true)](https://ci.appveyor.com/project/https://github.com/sebastianlzy/rebase-to-master/branch/master)
-[![Codecov](https://codecov.io/gh/https://github.com/sebastianlzy/rebase-to-master/branch/master/graph/badge.svg)](https://codecov.io/gh/https://github.com/sebastianlzy/rebase-to-master)
-[![Downloads/week](https://img.shields.io/npm/dw/rebase-to-master.svg)](https://npmjs.org/package/rebase-to-master)
-[![License](https://img.shields.io/npm/l/rebase-to-master.svg)](https://github.com/https://github.com/sebastianlzy/rebase-to-master/blob/master/package.json)
+A list of commonly use CLI
 
 <!-- toc -->
+
 # Usage
+
 <!-- usage -->
+
+1.  clone (repo)[https://github.com/sebastianlzy/seabass]
+2.  npm install
+3.  npm link
+
 # Commands
+
 <!-- commands -->
+
+`seabass <flag> <branchName>`
+
+## Option flag
+
+`-c : create branch`
+`-d : delete branch`
+`-r : rebase branch`
+
+### --rebase <branchName>
+
+`seabass -r master`
+
+This allows you to rebase your current branch on top of master. NOTE: Rebase will overwrites history to form a easy to read tree structure
+
+### --create <branchName>
+
+`seabass -c new-branch`
+
+This allows you to create new branch which adhere to the format feature/<branchName>
+
+### --delete <branchName>
+
+`seabass -d new-branch`
+
+This allows you to delete existing branch, feature/<branchName>
